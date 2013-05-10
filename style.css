@@ -1,0 +1,184 @@
+/* CSS Document */
+
+/* Common */
+body,html{height:100%;}
+body{font-family:Arial, Helvetica, sans-serif;font-size:12px;margin:0px;overflow:hidden;}
+*::selection{background:transparent;}
+ul,ol,li{margin:0px;padding:0px;list-style:none;}
+/*--------*/
+
+/* Scroll Bar */
+*::-webkit-scrollbar{height:12px;overflow:visible;width:12px;background:#EFEFEF;}
+*::-webkit-scrollbar-thumb
+{
+	background-color: rgba(0, 0, 0, .2);
+	background-clip: padding-box;
+	border: solid transparent;
+	border-width: 1px 1px 1px 1px;
+	min-height: 28px;
+	width:12px;
+	padding: 100px 0 0;
+	box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .1),inset 0 -1px 0 rgba(0, 0, 0, .07);
+}
+
+*::-webkit-scrollbar-button{height:0px;width:0px;}
+*::-webkit-scrollbar-track{background-clip:padding-box;border: solid transparent;border-width: 0 0 0 4px;}
+*::-webkit-scrollbar-corner{background:transparent;}
+/*------------*/
+
+/* Login Panel */
+#loginPanel{width:400px;padding:10px 0px;margin:auto;border:solid 5px #DDD;text-align:center;position:relative;top:100px;}
+#loginPanel label{display:block;margin:5px;}
+#loginPanel label .txt{width:200px;border:solid 1px #CCC;padding:5px;margin:5px;}
+#loginPanel .btn{border:solid 1px #CCC;background:#CCC;padding:5px 15px;margin:0px;}
+/*-------------*/
+
+/* Chat Panel */
+#chatPanel{height:100%;min-height:100%;width:85%;left:0px;background:#CCCCCC;position:fixed;display:none;}
+/*------------*/
+
+/* Jabber List Panel */
+#rightPanel{height:100%;min-height:100%;width:15%;right:0px;position:fixed;display:none;}
+#rightPanel>ul{width:100%;height:100%;display:table;}
+#rightPanel>ul>li{display:table-row;}
+#rightPanel>ul>li.statusSection>div{padding:5px;height:1%;text-align:center;display:table-cell;border-bottom:solid 1px #CCC;}
+#rightPanel>ul>li.statusSection .lst{width:98%;margin:0px;padding:3px;}
+#rightPanel>ul>li.searchSection>div{padding:5px;height:1%;text-align:center;display:table-cell;border-top:solid 1px #CCC;}
+#rightPanel>ul>li.searchSection .txt{width:95%;margin:0px;padding:3px;}
+#jabberListPanel ul{overflow-y:scroll;height:100%;}
+#jabberListPanel ul li{padding:10px;cursor:pointer;}
+#jabberListPanel ul li:hover{background:#EEEEEE;}
+#jabberListPanel ul li .statusIcon{float:left;display:inline-block;height:15px;width:15px;margin-right:8px;border-radius:7px;}
+#jabberListPanel ul li .statusIcon.busy{background:#d00303;}
+#jabberListPanel ul li .statusIcon.away{background:#ff8f3d;}
+#jabberListPanel ul li .statusIcon.unavailable{background:#CCC;}
+#jabberListPanel ul li .statusIcon.available{background:#46b843;}
+/*-------------------*/
+
+/* Chat Box */
+.chatBox{background:#FFF;width:200px;border:solid 1px #CCC;float:left;border:solid 1px #AAA;position:absolute;z-index:90;}
+.chatBox .header{overflow:hidden;padding:5px;border-bottom:solid 1px #AAA;cursor:default;}
+.chatBox .header .title{float:left;}
+.chatBox .header .title .statusIcon{float:left;display:inline-block;height:15px;width:15px;margin-right:5px;border-radius:7px;}
+.chatBox .header .title .statusIcon.busy{background:#d00303;}
+.chatBox .header .title .statusIcon.away{background:#ff8f3d;}
+.chatBox .header .title .statusIcon.unavailable{background:#CCC;}
+.chatBox .header .title .statusIcon.available{background:#46b843;}
+.chatBox .header .toolbar{float:right;font-weight:bold;}
+.chatBox .header .toolbar .btn{padding:0px 4px;display:inline-block;cursor:pointer;}
+.chatBox .header .toolbar .btn:hover{background:#CCCCCC;color:#FFF;}
+.chatBox .body .conversation{height:200px;padding:5px;overflow-y:scroll;}
+.chatBox .body .conversation .username{font-style:italic;font-weight:bold;}
+.chatBox .body .conversation .sent{text-align:left;}
+.chatBox .body .conversation .receive{text-align:right;}
+.chatBox .body .conversation .msgBlock{margin-bottom:10px;word-wrap:break-word;}
+.chatBox .body .conversation .simileyIcon{background:url(similey-sprite.png) no-repeat;display:inline-block;width:17px;height:17px;}
+.chatBox .curmsg{padding:5px;border-top:solid 1px #AAA;}
+.chatBox .curmsg .myCurMsg{margin:0px;padding:3px;width:180px;border:solid 1px #CCC;}
+/*----------*/
+
+/* Similey Icons */
+.chatBox .body .conversation .simileyIcon.s1{background-position:-11px -8px;}
+.chatBox .body .conversation .simileyIcon.s2{background-position:-39px -8px;}
+.chatBox .body .conversation .simileyIcon.s3{background-position:-68px -8px;}
+.chatBox .body .conversation .simileyIcon.s4{background-position:-96px -8px;}
+.chatBox .body .conversation .simileyIcon.s5{background-position:-125px -8px;}
+
+.chatBox .body .conversation .simileyIcon.s6{background-position:-11px -34px;}
+.chatBox .body .conversation .simileyIcon.s7{background-position:-39px -34px;}
+.chatBox .body .conversation .simileyIcon.s8{background-position:-68px -34px;}
+.chatBox .body .conversation .simileyIcon.s9{background-position:-96px -34px;}
+.chatBox .body .conversation .simileyIcon.s10{background-position:-125px -34px;}
+
+.chatBox .body .conversation .simileyIcon.s11{background-position:-11px -60px;}
+.chatBox .body .conversation .simileyIcon.s12{background-position:-39px -60px;}
+.chatBox .body .conversation .simileyIcon.s13{background-position:-68px -60px;}
+.chatBox .body .conversation .simileyIcon.s14{background-position:-96px -60px;}
+.chatBox .body .conversation .simileyIcon.s15{background-position:-125px -60px;}
+
+.chatBox .body .conversation .simileyIcon.s16{background-position:-11px -86px;}
+.chatBox .body .conversation .simileyIcon.s17{background-position:-39px -86px;}
+.chatBox .body .conversation .simileyIcon.s18{background-position:-68px -86px;}
+.chatBox .body .conversation .simileyIcon.s19{background-position:-96px -86px;}
+.chatBox .body .conversation .simileyIcon.s20{background-position:-125px -86px;}
+
+.chatBox .body .conversation .simileyIcon.s21{background-position:-11px -111px;}
+.chatBox .body .conversation .simileyIcon.s22{background-position:-39px -111px;}
+.chatBox .body .conversation .simileyIcon.s23{background-position:-68px -111px;}
+.chatBox .body .conversation .simileyIcon.s24{background-position:-96px -111px;}
+.chatBox .body .conversation .simileyIcon.s25{background-position:-125px -111px;}
+
+.chatBox .body .conversation .simileyIcon.s26{background-position:-11px -137px;}
+.chatBox .body .conversation .simileyIcon.s27{background-position:-39px -137px;}
+.chatBox .body .conversation .simileyIcon.s28{background-position:-68px -137px;}
+.chatBox .body .conversation .simileyIcon.s29{background-position:-96px -137px;}
+.chatBox .body .conversation .simileyIcon.s30{background-position:-125px -137px;}
+
+.chatBox .body .conversation .simileyIcon.s31{background-position:-11px -163px;}
+.chatBox .body .conversation .simileyIcon.s32{background-position:-39px -163px;}
+.chatBox .body .conversation .simileyIcon.s33{background-position:-68px -163px;}
+.chatBox .body .conversation .simileyIcon.s34{background-position:-96px -163px;}
+.chatBox .body .conversation .simileyIcon.s35{background-position:-125px -163px;}
+
+.chatBox .body .conversation .simileyIcon.s36{background-position:-11px -189px;}
+.chatBox .body .conversation .simileyIcon.s37{background-position:-39px -189px;}
+.chatBox .body .conversation .simileyIcon.s38{background-position:-68px -189px;}
+.chatBox .body .conversation .simileyIcon.s39{background-position:-96px -189px;}
+.chatBox .body .conversation .simileyIcon.s40{background-position:-125px -189px;}
+
+.chatBox .body .conversation .simileyIcon.s41{background-position:-11px -215px;}
+.chatBox .body .conversation .simileyIcon.s42{background-position:-39px -215px;}
+.chatBox .body .conversation .simileyIcon.s43{background-position:-68px -215px;}
+.chatBox .body .conversation .simileyIcon.s44{background-position:-96px -215px;}
+.chatBox .body .conversation .simileyIcon.s45{background-position:-125px -215px;}
+
+.chatBox .body .conversation .simileyIcon.s46{background-position:-11px -241px;}
+.chatBox .body .conversation .simileyIcon.s47{background-position:-39px -241px;}
+.chatBox .body .conversation .simileyIcon.s48{background-position:-68px -241px;}
+.chatBox .body .conversation .simileyIcon.s49{background-position:-96px -241px;}
+.chatBox .body .conversation .simileyIcon.s50{background-position:-125px -241px;}
+
+.chatBox .body .conversation .simileyIcon.s51{background-position:-11px -267px;}
+.chatBox .body .conversation .simileyIcon.s52{background-position:-39px -267px;}
+.chatBox .body .conversation .simileyIcon.s53{background-position:-68px -267px;}
+.chatBox .body .conversation .simileyIcon.s54{background-position:-96px -267px;}
+.chatBox .body .conversation .simileyIcon.s55{background-position:-125px -267px;}
+
+.chatBox .body .conversation .simileyIcon.s56{background-position:-11px -293px;}
+.chatBox .body .conversation .simileyIcon.s57{background-position:-39px -293px;}
+.chatBox .body .conversation .simileyIcon.s58{background-position:-68px -293px;}
+.chatBox .body .conversation .simileyIcon.s59{background-position:-96px -293px;}
+.chatBox .body .conversation .simileyIcon.s60{background-position:-125px -293px;}
+
+.chatBox .body .conversation .simileyIcon.s61{background-position:-11px -319px;}
+.chatBox .body .conversation .simileyIcon.s62{background-position:-39px -319px;}
+.chatBox .body .conversation .simileyIcon.s63{background-position:-68px -319px;}
+.chatBox .body .conversation .simileyIcon.s64{background-position:-96px -319px;}
+.chatBox .body .conversation .simileyIcon.s65{background-position:-125px -319px;}
+
+.chatBox .body .conversation .simileyIcon.s66{background-position:-11px -344px;}
+.chatBox .body .conversation .simileyIcon.s67{background-position:-39px -344px;}
+.chatBox .body .conversation .simileyIcon.s68{background-position:-68px -344px;}
+.chatBox .body .conversation .simileyIcon.s69{background-position:-96px -344px;}
+.chatBox .body .conversation .simileyIcon.s70{background-position:-125px -344px;}
+
+.chatBox .body .conversation .simileyIcon.s71{background-position:-11px -371px;}
+.chatBox .body .conversation .simileyIcon.s72{background-position:-39px -371px;}
+.chatBox .body .conversation .simileyIcon.s73{background-position:-68px -371px;}
+.chatBox .body .conversation .simileyIcon.s74{background-position:-96px -371px;}
+.chatBox .body .conversation .simileyIcon.s75{background-position:-125px -371px;}
+
+.chatBox .body .conversation .simileyIcon.s76{background-position:-11px -396px;}
+.chatBox .body .conversation .simileyIcon.s77{background-position:-39px -396px;}
+.chatBox .body .conversation .simileyIcon.s78{background-position:-68px -396px;}
+.chatBox .body .conversation .simileyIcon.s79{background-position:-96px -396px;}
+.chatBox .body .conversation .simileyIcon.s80{background-position:-125px -396px;}
+
+.chatBox .body .conversation .simileyIcon.s81{background-position:-11px -422px;}
+.chatBox .body .conversation .simileyIcon.s82{background-position:-39px -422px;}
+.chatBox .body .conversation .simileyIcon.s83{background-position:-68px -422px;}
+.chatBox .body .conversation .simileyIcon.s84{background-position:-96px -422px;}
+.chatBox .body .conversation .simileyIcon.s85{background-position:-125px -422px;}
+
+.chatBox .body .conversation .simileyIcon.s86{background-position:-11px -448px;}
+/*---------------*/

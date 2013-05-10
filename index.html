@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Jabber - Client</title>
+<link type="text/css" rel="stylesheet" href="style.css" />
+<script type="text/javascript" language="javascript" src="jquery.js"></script>
+<script type="text/javascript" language="javascript" src="jquery.xmpp.js"></script>
+<script type="text/javascript" language="javascript" src="script.js"></script>
+</head>
+<body>
+<div id="outerContainer">
+	<div id="loginPanel">
+    	<label><input type="email" id="txt_email" name="txt_email" class="txt" placeholder="Email" /></label>
+        <label><input type="password" id="txt_password" name="txt_password" class="txt" placeholder="Password" /></label>
+        <input type="button" id="btn_login" name="btn_login" class="btn" value="Login" />
+    </div>
+    <div id="chatPanel"></div>
+    <div id="rightPanel">
+    	<ul>
+        	<li class="statusSection">
+            	<div>
+                    <select id="lst_status" name="lst_status" class="lst">
+                        <option value="available">Available</option>
+                        <option value="dnd">Busy</option>
+                        <option value="away">Away</option>
+                        <option value="offline">Offline</option>
+                        <option value="disconnect">Disconnect</option>
+                    </select>
+                </div>
+            </li>
+            <li id="jabberListPanel">
+            	<ul></ul>
+            </li>
+            <li class="searchSection">
+            	<div>
+            		<input type="text" id="txt_search" name="txt_search" class="txt" placeholder="Search" />
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
